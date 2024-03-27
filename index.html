@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EIPP Moveset Copy-Paste</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@pkmn/dex/build/learnsets.min.js"></script>
+        <script src="https://unpkg.com/@pkmn/dex"></script>
+        <script src="https://unpkg.com/@pkmn/data"></script>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <h1>EIPP Moveset Copy-Paste</h1>
+        <form id="input-data">
+            <label for="pokemon">Pokemon:</label>
+            <input type="text" id="pokemon" name="pokemon" required>
+            <br>
+            <button>Get Moves</button>
+            <br>
+        </form>
+        <p>
+            <textarea id="moves" readonly></textarea>
+        </p>
+    </body>
+</html>

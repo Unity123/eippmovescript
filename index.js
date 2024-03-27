@@ -38,14 +38,18 @@ function init() {
 
 async function getLearnset() {
     var learn = await gen.learnsets.all(gen.species.get($("#pokemon").val()));
+    var ls = [];
     for await (var set of learn) {
         console.log(set);
         if (set.learnset) {
             var learnset = Object.keys(set.learnset);
             console.log(learnset);
             for (var move of learnset) {
-                console.log(move);
-                $("#moves").append(move + "\n");
+                if (ls.includes(move)) {
+                    continue;
+                }
+                ls.push(move);
+                $("#learnset").append(gen.moves.get(move).name + "\n");
             }
         }
     }
